@@ -62,6 +62,7 @@ class ModelClient:
             self.client = ChatDeepSeek(
                 model=self.model_name,
                 api_key=self.api_key,
+                api_base=settings.deepseek_api_base,
                 temperature=0.7,
                 max_tokens=None,
                 timeout=None,

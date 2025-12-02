@@ -7,6 +7,7 @@ class Settings(BaseSettings):
     platform: str = "deepseek"  # 可选值: deepseek, google
     model_name: str = "deepseek-chat"
     api_key: str
+    deepseek_api_base: str
     
     # 日志配置
     log_level: str = "INFO"
@@ -19,7 +20,7 @@ class Settings(BaseSettings):
     class Config:
         env_file = ".env"
         env_file_encoding = "utf-8"
-        case_sensitive = False
+        case_sensitive = False 
 
 
 # 创建全局配置实例
