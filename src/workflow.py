@@ -307,8 +307,11 @@ def json_to_markdown(json_data: dict) -> str:
     success_criteria = json_data.get('success_criteria', [])
     if success_criteria:
         md_content.append("## 成功标准")
-        for criterion in success_criteria:
-            md_content.append(f"- {criterion}")
+        if isinstance(success_criteria, list):
+            for criterion in success_criteria:
+                md_content.append(f"- {criterion}")
+        else:
+            md_content.append(success_criteria)
         md_content.append("")
     
     # 添加风险管理
@@ -334,22 +337,31 @@ def json_to_markdown(json_data: dict) -> str:
             skills = milestone.get('skills', [])
             if skills:
                 md_content.append("**需掌握技能**:")
-                for skill in skills:
-                    md_content.append(f"- {skill}")
+                if isinstance(skills, list):
+                    for skill in skills:
+                        md_content.append(f"- {skill}")
+                else:
+                    md_content.append(skills)
                 md_content.append("")
             
             projects = milestone.get('projects', [])
             if projects:
                 md_content.append("**项目产出要求**:")
-                for project in projects:
-                    md_content.append(f"- {project}")
+                if isinstance(projects, list):
+                    for project in projects:
+                        md_content.append(f"- {project}")
+                else:
+                    md_content.append(projects)
                 md_content.append("")
             
             resources = milestone.get('resources', [])
             if resources:
                 md_content.append("**推荐学习资源**:")
-                for resource in resources:
-                    md_content.append(f"- {resource}")
+                if isinstance(resources, list):
+                    for resource in resources:
+                        md_content.append(f"- {resource}")
+                else:
+                    md_content.append(resources)
                 md_content.append("")
     
     return '\n'.join(md_content)

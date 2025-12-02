@@ -216,7 +216,7 @@ __marimo__/
 .streamlit/secrets.toml
 
 logs/*
-plans/*
+plans*/
 .trae/
 .pytest_cache/
 .env
