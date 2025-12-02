@@ -15,7 +15,7 @@
 7. **反馈机制**：包含每日学习效果的检查和反馈机制
 
 # Output Format
-请严格按照JSON格式输出，包含以下字段：
+请严格按照JSON格式输出，**注意：只输出纯JSON内容，不要包含任何markdown格式（如```json ... ```），确保输出是可直接解析的JSON**。包含以下字段：
 - "week_range": 双周范围（如"Week 1-2"）
 - "total_hours": 总学习时长
 - "daily_schedule": 每日计划数组，每个计划包含：
