@@ -2,6 +2,12 @@
 
 一个基于大语言模型的个性化学习计划生成工具，能够根据用户的技术背景和学习目标，生成符合 SMART 原则的双周粒度学习计划，并进一步细化为日粒度学习安排。
 
+我试着用 DeepSeek-V3.2 和 DeepSeek-V3.2-Speciale 分别给我制定了一个半年学习计划。
+- [DeepSeek-V3.2 学习计划](plan_deepseek32.md)
+- [DeepSeek-V3.2-Speciale 学习计划](plan_deepseek_32_speciale.md)
+
+之前我也用 Gemini3 手动制定了一个半年学习计划，你可以在这篇知乎文章里 [五年INTP失业程序员，半年计划勇闯大模型岗位](https://zhuanlan.zhihu.com/p/1978508668996718986) 查看并进行对比。
+
 ## 🌟 核心功能
 
 - 🎯 根据用户背景和目标生成个性化学习计划
